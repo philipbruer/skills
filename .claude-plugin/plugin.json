@@ -1,0 +1,5 @@
+{
+  "name": "pb",
+  "description": "Skills used across all projects",
+  "skills": ["./skills/", "./.agents/skills/"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "philipbruer-skills",
+  "owner": {
+    "name": "Philip Bruér"
+  },
+  "metadata": {
+    "description": "Philip Bruér's skills"
+  },
+  "plugins": [
+    {
+      "name": "pb",
+      "description": "Skills used across all projects",
+      "source": "./",
+      "strict": false
+    }
+  ]
+}
