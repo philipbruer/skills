@@ -1,6 +1,6 @@
 ---
 name: memory
-description: Route something worth remembering to the file that owns it. Usage /pb:memory <what to remember>
+description: Route something worth remembering to the file that owns it. Usage /pb:memory [what to remember]
 disable-model-invocation: true
 argument-hint: <what to remember>
 ---

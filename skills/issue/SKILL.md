@@ -1,6 +1,6 @@
 ---
 name: issue
-description: Turn a description into a short plain-text prompt for the issue tracker's agent and put it on the clipboard. Usage /issue <description>
+description: Turn a description into a short plain-text prompt for the issue tracker's agent and put it on the clipboard. Usage /pb:issue [description]
 disable-model-invocation: true
 argument-hint: <description>
 ---
