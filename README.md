@@ -7,16 +7,15 @@ One install on my claude.ai account puts this layer on every machine.
 ## How it works
 
 1. A session starts. A hook prints the rule files into the agent's context, so it follows them from the first message. Subagents get the same rules.
-2. The agent tries `git commit`. A second hook blocks the command, because I manage git myself.
-3. A task matches a skill's description. Only then does that skill's text load, so an unused skill costs one line of context.
-4. I push a change. claude.ai re-syncs the repo, and every device has it at its next session.
+2. A task matches a skill's description. Only then does that skill's text load, so an unused skill costs one line of context.
+3. I push a change. claude.ai re-syncs the repo, and every device has it at its next session.
 
 ## What is in it
 
 | Path | Purpose |
 |---|---|
 | `rules/` | How the agent replies, writes, behaves and codes. Start with `rules/replies.md`. |
-| `hooks/` | Loads the rules, blocks mutating git commands, reports oversized skill files. |
+| `hooks/` | Loads the rules, reports oversized skill files. |
 | `skills/` | My own skills. `structure` says where every instruction belongs. |
 | `.agents/skills/` | Third-party skills, installed by the [skills CLI](https://skills.sh). `skills-lock.json` lists each one and its source. Never edited by hand. |
 

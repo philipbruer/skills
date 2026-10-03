@@ -51,7 +51,7 @@ A project with its own `structure` skill: that one decides for that repo.
 5. Procedure with steps: a skill. Here if generic, in the project if not.
 6. Fact about one project: that project, per the table above.
 
-One rule can split. "Never commit" is a line in `behavior.md` and a hook.
+One rule can split. "`SKILL.md` under 500 lines" is a line in this skill and a hook that reports a breach.
 
 Memory: Claude's automatic memory stays on. `/pb:memory <what>` puts something into the file that owns it, so every machine gets it.
 

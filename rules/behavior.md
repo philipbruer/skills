@@ -54,7 +54,7 @@
 
 ## Git and tools
 
-- Never run mutating git. Philip manages git. A hook blocks it.
+- Never run mutating git unless Philip asks for it in the session. Philip manages git.
 - Formatter with `--write`: build the file list first, fail if empty, absolute paths. Empty list formats the whole directory.
 - Accidental reformat: revert only those files with `git diff -- <files> | patch -p1 -R`.
 
