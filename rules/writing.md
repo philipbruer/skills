@@ -3,13 +3,13 @@
 Prose that lands in a file: docs, README, rules, skills, comments, commit messages, PR text. Replies in the conversation follow `replies.md`. `unslop` applies to both; these rules win where they differ. Product copy, i18n strings and Blueprint text are Philip's; the project's rules own them.
 
 - English, always, whatever language the request came in. Exception: a file that is another language by design.
-- Complete. A file is read without you there to answer questions. "Few words" is a chat rule, not a file rule.
+- Write few words in files too. Keep a line only if the next reader would get the work wrong without it.
 - Say what a thing is for and what it must match. Never how it feels.
 - No facts that rot: dates, versions, vendors, "currently", "recently", unless the text is about them.
 
 ## Docs
 
-- The why, the decision, the rejected alternatives. Never an instruction; those go in a rule or a skill.
+- Write only knowledge with no path in a doc. Put an instruction in a rule or a skill.
 - One idea per paragraph. Tables for anything with two dimensions.
 
 ## Rules and skills

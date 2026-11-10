@@ -13,34 +13,33 @@ Every instruction lives in git, in one place. Three sources, one job each:
 
 ## This repo
 
-| Layer | File | Loads | Mechanism |
-|---|---|---|---|
-| Replies | `rules/replies.md` | Every chat, every subagent | `SessionStart`, `SubagentStart` hooks |
-| Behavior | `rules/behavior.md` | Same | Same |
-| Code style | `rules/code.md` | Same | Same |
-| Prose in files | `rules/writing.md` | Same | Same |
-| Writing rules | `.agents/skills/unslop/SKILL.md`, third-party | Same | Same |
-| Hard rules | `hooks/` | Every matching action | Hook that blocks, or reports after the fact |
-| Own skills | `skills/<name>/SKILL.md` | On demand | `/pb:<name>`, or description match |
-| Third-party skills | `.agents/skills/<name>/`, installed by the skills CLI, listed in `skills-lock.json` | On demand | Same |
+| Layer              | File                                                                                | Loads                      | Mechanism                                   |
+| ------------------ | ----------------------------------------------------------------------------------- | -------------------------- | ------------------------------------------- |
+| Replies            | `rules/replies.md`                                                                  | Every chat, every subagent | `SessionStart`, `SubagentStart` hooks       |
+| Behavior           | `rules/behavior.md`                                                                 | Same                       | Same                                        |
+| Code style         | `rules/code.md`                                                                     | Same                       | Same                                        |
+| Prose in files     | `rules/writing.md`                                                                  | Same                       | Same                                        |
+| Writing rules      | `.agents/skills/unslop/SKILL.md`, third-party                                       | Same                       | Same                                        |
+| Hard rules         | `hooks/`                                                                            | Every matching action      | Hook that blocks, or reports after the fact |
+| Own skills         | `skills/<name>/SKILL.md`                                                            | On demand                  | `/pb:<name>`, or description match          |
+| Third-party skills | `.agents/skills/<name>/`, installed by the skills CLI, listed in `skills-lock.json` | On demand                  | Same                                        |
 
 ## Project repo
 
-| Kind | File | Loads |
-|---|---|---|
-| Short fact for all work | `CLAUDE.md`, under 200 lines | Every chat |
-| Rule for one code area | `.claude/rules/<topic>.md` with `paths:` | On reading a matching file |
-| The why behind a rule, a decision with rejected alternatives | `docs/` or `docs/concepts/<topic>.md`, one-line pointer from `CLAUDE.md` or the rule | When opened |
-| Product overview, ops notes | `docs/` | When opened |
-| Which library does which job | `.claude/rules/libraries.md` with `paths: "**/package.json"` | On reading a `package.json` |
-| Procedure for this project | `.claude/skills/<name>/SKILL.md` | On demand |
-| Rule for work outside repo files | Inside the skill that does the work | When the skill runs |
-| Audit report | `audit/<topic>-<date>.md`, written by an audit skill, one file per run, committed | When opened |
-| Task, todo, idea | The issue tracker. Never a file. | |
+| Kind                                                         | File                                                                                 | Loads                       |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------ | --------------------------- |
+| Short fact for all work                                      | `CLAUDE.md`, under 200 lines                                                         | Every chat                  |
+| Rule for one code area                                       | `.claude/rules/<topic>.md` with `paths:`                                             | On reading a matching file  |
+| Product overview, ops notes                                  | `docs/`                                                                              | When opened                 |
+| Which library does which job                                 | `.claude/rules/libraries.md` with `paths: "**/package.json"`                         | On reading a `package.json` |
+| Procedure for this project                                   | `.claude/skills/<name>/SKILL.md`                                                     | On demand                   |
+| Rule for work outside repo files                             | Inside the skill that does the work                                                  | When the skill runs         |
+| Audit report                                                 | `audit/<topic>-<date>.md`, written by an audit skill, one file per run, committed    | When opened                 |
+| Task, todo, idea                                             | The issue tracker. Never a file.                                                     |                             |
 
 `docs/` never holds an instruction. An instruction found there moves to a rule or a skill.
 
-A project with its own `structure` skill: that one decides for that repo.
+Follow a project's writing and structure rule for placement inside that repo.
 
 ## Where a rule goes
 
@@ -76,9 +75,9 @@ Memory: Claude's automatic memory stays on. `/pb:memory <what>` puts something i
 
 ## Reach
 
-| Surface | Setup |
-|---|---|
-| Every device, every surface | Add this repo as a marketplace on claude.ai with sync on, install `pb` there. Once, for the account. |
+| Surface                               | Setup                                                                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Every device, every surface           | Add this repo as a marketplace on claude.ai with sync on, install `pb` there. Once, for the account.                           |
 | One machine without the account route | `claude plugin marketplace add https://github.com/philipbruer/skills.git`, then `claude plugin install pb@philipbruer-skills`. |
 
 ## Change

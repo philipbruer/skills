@@ -36,6 +36,7 @@
 - An earlier go in the session does not turn later questions into commands.
 - "Do not touch X" holds for the session. A later ambiguous mention does not revoke it. Ask.
 - Comment cleanup is not refactor permission.
+- Asked to clean up or improve: change only what has a fault you can name. Nothing found: say so and change nothing. A pass that always finds something never ends.
 
 ## Precision
 
