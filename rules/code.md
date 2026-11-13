@@ -6,6 +6,11 @@
 - Few variables. No comments stating the obvious.
 - Unsure: mirror the surrounding file exactly.
 
+## Libraries
+
+- Let the library own the logic. Before you write a helper, a type, a union, a cast or a workaround, and in every file you touch, read the installed version's source and types for an API or a type that does the job. Use it however large the refactor, and prove the behavior is unchanged with tests or identical output.
+- Treat the installed version as newer than the code around it: a bump adopts nothing by itself.
+
 ## Names
 
 - Full names that mirror the hook or entity: `unreadNotificationCount`, not `unreadCount`.
